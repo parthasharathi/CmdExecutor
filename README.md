@@ -3,7 +3,7 @@
 ## Features
 - CmdExecutor Application help us to execute multiple command in single application
 
-- No need open multiple command prompt to execute multiple commands, Single application help you to run multiple command 
+- No need open multiple command prompt to execute multiple commands, Single application help us to run multiple command 
 
 - You can view the command logs 
 
