@@ -1,0 +1,221 @@
+
+.grid {
+  height: 95.55%;
+}
+
+#left_panel{
+float:left;
+    width: 50%;
+	     resize: none;
+overflow: hidden;
+height:665px;
+    border: 1px solid #0c0c0c;
+/* height:100%;
+width:50%;
+  word-wrap: break-word;
+      resize: both;
+overflow: auto; */
+  
+/*     white-space: pre-wrap;      
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap;    
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;        */
+
+}
+#console{
+height:100%;
+min-width: 99.45%;
+border: none; 
+min-height:650px; 
+max-height:650px;
+    max-width: 99.45%;
+  word-wrap: break-word;
+    resize: none;
+ overflow: hidden; 
+}
+#console:hover{
+overflow:visible;
+}
+#right_panel{
+ position: relative;
+
+height:665px;
+width:49%;
+  word-wrap: break-word;
+overflow: auto;
+padding-left: 2px;
+
+}
+#right_panel_bottom{
+     border: 1px solid;
+	    height: 69.45%;
+		overflow: hidden; 
+}
+#right_panel_top{
+  border: 1px solid;
+    height: 30%;
+	position:relative;
+}
+#root{
+width:92%;
+}
+#rootBrowse{
+       width: 8%;
+    height: 17%;
+    margin: -7px 0px 0px -10px;
+    position: absolute;
+}
+#cmd_editor{
+    min-width: 98.45%;
+    min-height: 65%;
+    max-height: 100px;
+    max-width: 99.45%;
+    word-wrap: break-word;
+    resize: none;
+    overflow-x: hidden;
+
+}
+button{
+margin-left: 1px;
+margin-top: 8px;
+/* background-color: #4CAF50;  */
+background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+.button{
+background-color: #4CAF50; /* Green */
+
+}
+#stopButton{
+background-color: #196b04; /* Green */
+}
+.execute_btn {
+height: 80% !important;
+    width: 50% !important;
+	padding-top: 3px !important;
+	padding-left: 12px !important;
+}
+
+.EditSave {
+position: relative;
+    margin-top: -3px;
+
+ left: 66%;
+}
+.EditRun {
+position: relative;
+    margin-top: -3px;
+
+ left: 66%;
+}
+.EditReset{
+position: relative;
+    margin-top: -3px;
+
+ left: 66%;
+}
+
+#btn-savedHistory{
+background-color: #e6e6e6; color: black;
+width:50%;
+/* opacity:0.5; */
+margin: 0 0 0 0;
+float:left;
+border-bottom:3px solid #e6e6e6;
+}
+#btn-LogHistory{
+background-color: #d4d4d4; color: black;
+border-bottom:3px solid #4CAF50;
+width:50%;
+/* opacity:0.5; */
+margin: 0 0 0 0;
+float:left;
+}
+
+#btn-savedHistory:hover{
+background-color:#d4d4d4;
+}
+#btn-LogHistory:hover{
+background-color:#d4d4d4;
+}
+.textArea_root{
+color: #800000;
+}
+#textArea_cmd{
+color: green;
+}
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 40px 16px;}
+#saveName{
+width:80%;
+line-height: 1.6em;
+}
