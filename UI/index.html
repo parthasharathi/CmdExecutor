@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Execute Node</title>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/scrollglue.js"></script>
+    <script src="./lib/angular-touch.js"></script>
+    <script src="./lib/angular-animate.js"></script>
+    <script src="./lib/csv.js"></script>
+    <script src="./lib/pdfmake.js"></script>
+    <script src="./lib/vfs_fonts.js"></script>
+    <script src="./lib/ui-grid.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./lib/ui-grid.css">
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="HelloController">
+        <div id="left_panel">
+            <B> <span class="textArea_root"data-ng-bind="textAreaRoot"></span> <span class="textArea_root" data-ng-if="textAreaRoot">></span>  <span id="textArea_cmd"data-ng-bind="textAreaCommand"></span></B>
+            <textarea id="console" scroll-glue id="textarea" ng-model="logContent" readonly></textarea>
+        </div>
+        <div id="right_panel">
+            <div id="right_panel_top">
+                <input id="root" class="textArea_root" type="text" data-ng-model="root" placeholder="Root" />
+                <img id="rootBrowse" src=".\img\browse.png" accesskey="b" data-ng-click="browse()"></img>
+                <textarea id="cmd_editor" data-ng-model="cmd" ng-enter="start()" scroll-glue id="textarea"></textarea>
+
+                <button class="EditRun" data-ng-click="start()" accesskey="r">Run</button>
+                <button class="EditSave" data-ng-click="popUpwindow=true" accesskey="s">Save</button>
+                <button class="EditReset" data-ng-click="Reset()" accesskey="c">Reset</button>
+
+            </div>
+            <div id="right_panel_bottom" scroll-glue-top="!glued">
+                <a href="">
+                    <button id="btn-LogHistory" data-ng-click="getLogHistory()" accesskey="q">Log History</button>
+                </a>
+                <a href="">
+                    <button id="btn-savedHistory" accesskey="w" data-ng-click="getSavedHistory()">Saved History</button>
+                </a>
+                </br>
+                <div ng-if="!refresh" style=" clear:both;" ui-grid="gridOptions" class="grid"></div>
+                <div id="myModal" data-ng-show="popUpwindow == true" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close" data-ng-click="popUpwindow=false">×</a>
+                            <h2>Enter Name to be store</h2>
+                        </div>
+                        <div class="modal-body">
+                            <input id="saveName" data-ng-model="SaveName" type="text" />
+                            <button data-ng-click="save()">Save</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
